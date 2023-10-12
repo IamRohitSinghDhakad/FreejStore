@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vA4-PF-rSf">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="El7-TQ-fmk">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="vA4-PF-rSf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3qJ-iM-HLi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tA7-tQ-FaJ" kind="relationship" relationship="rootViewController" id="CnC-p3-RTl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGO-Of-0Ge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1729" y="-7"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z5W-hs-oec">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="tA7-tQ-FaJ" customClass="ViewController" customModule="Freejstore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BKT-lA-RZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZBr-UE-IyE">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bfm-is-gA7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZBr-UE-IyE" secondAttribute="bottom" id="Lx7-nU-CRM"/>
+                            <constraint firstItem="ZBr-UE-IyE" firstAttribute="trailing" secondItem="Bfm-is-gA7" secondAttribute="trailing" id="Wtk-jF-ieW"/>
+                            <constraint firstItem="ZBr-UE-IyE" firstAttribute="top" secondItem="BKT-lA-RZ4" secondAttribute="top" id="skm-yl-cCI"/>
+                            <constraint firstItem="ZBr-UE-IyE" firstAttribute="leading" secondItem="Bfm-is-gA7" secondAttribute="leading" id="tKd-Qa-dPd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wxF-yx-n7C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSp-ra-2T4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-822.13740458015263" y="11.971830985915494"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="VxU-qO-owC">
+            <objects>
+                <viewController storyboardIdentifier="WebViewViewController" id="9bs-PT-nUN" customClass="WebViewViewController" customModule="Freejstore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K0d-iL-dZC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzf-4H-f71">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="lEA-je-Bp7">
+                                <rect key="frame" x="165" y="416" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ICD-Eg-gW1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zzf-4H-f71" firstAttribute="leading" secondItem="ICD-Eg-gW1" secondAttribute="leading" id="E0a-3Q-mfN"/>
+                            <constraint firstItem="ICD-Eg-gW1" firstAttribute="trailing" secondItem="zzf-4H-f71" secondAttribute="trailing" id="RXi-FD-sOI"/>
+                            <constraint firstAttribute="bottom" secondItem="zzf-4H-f71" secondAttribute="bottom" id="ZAO-NV-g17"/>
+                            <constraint firstItem="zzf-4H-f71" firstAttribute="top" secondItem="ICD-Eg-gW1" secondAttribute="top" id="h3h-oV-TH0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lEA-je-Bp7" id="vU9-KI-9XQ"/>
+                        <outlet property="webVw" destination="zzf-4H-f71" id="az3-jM-coK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDl-Fg-HrO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash logo" width="414" height="896"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
